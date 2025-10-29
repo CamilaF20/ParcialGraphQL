@@ -5,9 +5,10 @@ const typeDefs = gql`
     id: ID!
     name: String!
     calories: Int!
-    protein: Float
-    carbs: Float
-    fat: Float
+    isVegetarian: Boolean
+    value: Float
+    coments: Float
+    --v:Int
   }
 
   type Query {
@@ -18,20 +19,23 @@ const typeDefs = gql`
 
   type Mutation {
     createDatabase(
-      name: String!
-      calories: Int!
-      protein: Float
-      carbs: Float
-      fat: Float
+        id: ID!
+        name: String!
+        calories: Int!
+        isVegetarian: Boolean
+        value: Float
+        coments: Float
+        --v:Int
     ): Database
 
     updateDatabase(
-      id: ID!
-      name: String
-      calories: Int
-      protein: Float
-      carbs: Float
-      fat: Float
+        id: ID!
+        name: String!
+        calories: Int!
+        isVegetarian: Boolean
+        value: Float
+        coments: Float
+        --v:Int
     ): Database
 
     deleteDatabase(id: ID!): String
